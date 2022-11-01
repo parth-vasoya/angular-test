@@ -1,8 +1,8 @@
 <div class="footer">
   <div class="copyright">copyright @test</div>
   <ul>
-    <li><a href="#">Contact us</a></li>
-    <li><a href="#">About us</a></li>
-    <li><a href="#">Map</a></li>
+    <li *ngFor="let link of links">
+      <a href="{{link.url}}">{{link.label}}</a>
+    </li>
   </ul>
 </div>

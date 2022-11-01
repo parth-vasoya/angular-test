@@ -1,1 +1,40 @@
-<app-home></app-home>
+<app-header></app-header>
+<div class="wrapper">
+  <div class="col-4">
+    <app-banner></app-banner>
+  </div>
+  <div class="main-content">
+    <div>
+      <h4 [ngClass]="{'font-red': isVisible}">What is Lorem Ipsum?</h4>
+      <button (click)="showAnswer()">{{buttonText}}</button>
+      <div class="answer" *ngIf="isVisible">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+        <p>It has survived not only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+          containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.</p>
+      </div>
+    </div>
+    <div class="second-block">
+      <input type="text" [(ngModel)]="type" (ngModelChange)="update()">
+      <div [ngSwitch]="type" [ngStyle]="{'color': 'firebrick', 'font-size': '20px'}">
+        <div *ngSwitchCase="1">
+          <p>First case</p>
+        </div>
+        <div *ngSwitchCase="2">
+          <p>Second Case</p>
+        </div>
+        <div *ngSwitchCase="3">
+          <p>Third Case</p>
+        </div>
+        <div *ngSwitchDefault>
+          <p>Default Case</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

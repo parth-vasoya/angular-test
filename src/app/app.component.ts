@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'demo';
+  isVisible = false;
+  buttonText = 'Show Answer';
+  type = '';
+
+  showAnswer() {
+    this.isVisible = !this.isVisible;
+    this.buttonText = (this.isVisible) ? 'Hide Answer' : 'Show Answer';
+  }
+
+  update() {
+    console.log(this.type);
+  }
 }
