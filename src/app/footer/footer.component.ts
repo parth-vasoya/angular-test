@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+
+export interface LinkInterface {
+  label: String,
+  url: String
+}
 
 @Component({
   selector: 'app-footer',
@@ -7,12 +12,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  links = [
-    {'label': 'Contact us', 'url' : '#'},
-    {'label': 'About us', 'url' : '#'},
-    {'label': 'Map', 'url' : '#'},
-    ];
-  constructor() { }
+  public links: LinkInterface[] = [
+    {'label': 'Contact us', 'url': '#'},
+    {'label': 'About us', 'url': '#'},
+    {'label': 'Map', 'url': '#'},
+  ];
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

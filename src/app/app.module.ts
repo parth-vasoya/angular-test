@@ -7,13 +7,15 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
 import {FormsModule} from "@angular/forms";
+import { CustomSelectInputComponent } from './custom-select-input/custom-select-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    BannerComponent
+    BannerComponent,
+    CustomSelectInputComponent
   ],
   imports: [
     BrowserModule,

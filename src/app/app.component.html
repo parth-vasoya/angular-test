@@ -19,6 +19,10 @@
       </div>
     </div>
     <div class="second-block">
+      <input type="text" #inputField [(ngModel)]="selectedCountry">
+      <app-custom-select-input [options]="countries" [selectedOption]="selectedCountry" (onSelect)="updateValue($event)"></app-custom-select-input>
+    </div>
+    <!--<div class="second-block">
       <input type="text" [(ngModel)]="type" (ngModelChange)="update()">
       <div [ngSwitch]="type" [ngStyle]="{'color': 'firebrick', 'font-size': '20px'}">
         <div *ngSwitchCase="1">
@@ -34,7 +38,7 @@
           <p>Default Case</p>
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </div>
 <app-footer></app-footer>

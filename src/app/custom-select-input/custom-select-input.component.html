@@ -1,0 +1,5 @@
+<div>
+  <select (change)="selectChange(selectInput.value)" #selectInput>
+    <option *ngFor="let option of options" [selected]="option.name == selectedOption">{{option.name}}</option>
+  </select>
+</div>
